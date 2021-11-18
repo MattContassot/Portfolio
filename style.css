@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #0e0e0e;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  flex-grow: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 15px;
+    height: 50px;
+    position: fixed;
+    background-color: #0e0e0e;
+}
+
+header #nome {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    font-size: 30px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    font-size: 20px;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: flex-start;
+  margin: 90px 20px 40px 20px;
+  width: calc(100% - 40px);
+  min-height: calc(100vh - 60px - 130px);
+}
+
+.projeto {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: calc(100% / 3 - 20px);
+  height: 350px;
+  margin: 10px;
+}
+
+.janelaNavegador {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: #202020;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 80%;
+  padding: 0 3px 3px 3px;
+}
+
+.projeto p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  height: 15%;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20px;
+  margin-left: 8px;
+}
+
+.botao {
+  background-color: #969696;
+  width: 4px;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}
+
+.janelaNavegador a {
+  width: 100%;
+  height: 94%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.janelaNavegador a img {
+  width: 100%;
+  height: 100%;
+}
+
+#projetoSelecionado {
+  margin-bottom: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #202020;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+}

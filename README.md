@@ -1,5 +1,4 @@
-Este repositório servirá para exibir meu portfólio, ainda estou o construindo conforme avanço nas aulas da Trybe.
+Este repositório serve para exibir meu portfólio (a princípio serão apenas os projetos desenvolvidos durante o curso da Trybe), ainda estou o construindo conforme avanço nas aulas e aprendo novas ferramentas, então com certeza os últimos projetos serão melhores desenvolvidos e mais bonitos devido ao maior conhecimento possuído. Não pretendo retornar para refazer os primeiros projetos pois gostaria de demonstrar também a minha evolução durante o curso.
 
 Referências:
-modelo - https://pages-themes.github.io/minimal/
-paleta de cores - https://colorhunt.co/palette/2121216d9886d9cab3f6f6f6
+modelo - https://themes.getbootstrap.com/preview/?theme_id=60718
