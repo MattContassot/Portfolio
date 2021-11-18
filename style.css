@@ -127,3 +127,15 @@ footer div {
   align-items: center;
   width: 200px;
 }
+
+footer div a {
+  color: #f5f5f5;
+}
+
+.linkedInSelecionado {
+  color: #0A66C2;
+}
+
+.gitHubSelecionado {
+  color: #000000;
+}
