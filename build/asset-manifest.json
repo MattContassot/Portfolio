@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b00d8989.css",
+    "main.js": "/static/js/main.bf2e2f15.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/solarSystem.png": "/static/media/solarSystem.5ee06c5717a8b39dc3cb.png",
+    "static/media/shoppingCart.png": "/static/media/shoppingCart.414f1fdeed710fc2f278.png",
+    "static/media/trybeWarts.png": "/static/media/trybeWarts.83c01247c5553b237067.png",
+    "static/media/pixelArt.png": "/static/media/pixelArt.8b73ba04fb8d93a3d038.png",
+    "index.html": "/index.html",
+    "main.b00d8989.css.map": "/static/css/main.b00d8989.css.map",
+    "main.bf2e2f15.js.map": "/static/js/main.bf2e2f15.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b00d8989.css",
+    "static/js/main.bf2e2f15.js"
+  ]
+}
