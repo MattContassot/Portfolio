@@ -27,12 +27,11 @@ class Projects extends React.Component {
     const windowSize = document.querySelector('.projectListWindow');
     const titleSize = 22;
     const itemsSize = (
-      document.querySelectorAll('.projectList').length * 25
-      + document.querySelectorAll('.projectListOdd').length * 25
+      (document.querySelectorAll('.projectList').length * 25)
+      + (document.querySelectorAll('.projectListOdd').length * 25)
     );
     const itemPar = itemsSize % 2 === 0 ? 0 : 1;
     const fillSize = (windowSize.clientHeight - itemsSize - titleSize - 20) / 25;
-    // const footerSize = parseInt((fillSize - Math.floor(fillSize)) * 100);
     const footerSize = (fillSize - Math.floor(fillSize)) * 25;
 
     this.setState({
@@ -47,7 +46,7 @@ class Projects extends React.Component {
     const { fillSize, itemPar } = this.state;
     const blankLines = [];
 
-    for (let i = (itemPar); i < fillSize - 1; i += 1) {
+    for (let i = (itemPar); i <= Math.floor(fillSize); i += 1) {
       blankLines.push(
         <div
           key={ i }
