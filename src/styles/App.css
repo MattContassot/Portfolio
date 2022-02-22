@@ -59,9 +59,10 @@ main {
   align-items: center;
   align-content: flex-start;
   justify-content: center;
-  margin: 90px 20px 40px 20px;
+  margin: 70px 20px 40px 20px; /* Era 90px no top antes do netlify */
   width: calc(100% - 40px);
-  min-height: calc(100vh - 130px - 60px);
+  /* min-height: calc(100vh - 130px - 60px); */
+  min-height: calc(100vh - 110px - 60px);
 }
 
 /* Project Card */
