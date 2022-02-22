@@ -30,7 +30,7 @@ class ProjectCard extends React.Component {
             <div className="botao"></div>
             <div className="botao"></div>
           </div>
-          <a href={ link } target="_blank">
+          <a href={ link } target="_blank" rel="noopener">
             <img src={ img } alt={ imgName } />
           </a>
         </div>
