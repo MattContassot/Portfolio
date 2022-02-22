@@ -20,10 +20,10 @@ class Footer extends React.Component {
     return (
       <footer id="footer">
         <div>
-          <a id="linkedIn" href="https://www.linkedin.com/in/matheuscontassot/" target="_blank" rel="noopener" onMouseEnter={ this.handleMouse } onMouseLeave={ this.handleMouse }>
+          <a id="linkedIn" href="https://www.linkedin.com/in/matheuscontassot/" target="_blank" rel="noreferrer" onMouseEnter={ this.handleMouse } onMouseLeave={ this.handleMouse }>
             {linkedInIcon()}
           </a>
-          <a id="gitHub" href="https://github.com/MattContassot" target="_blank" rel="noopener" onMouseEnter={ this.handleMouse } onMouseLeave={ this.handleMouse }>
+          <a id="gitHub" href="https://github.com/MattContassot" target="_blank" rel="noreferrer" onMouseEnter={ this.handleMouse } onMouseLeave={ this.handleMouse }>
             {gitHubIcon()}
           </a>
           <Link to="/404">
