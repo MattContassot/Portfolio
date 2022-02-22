@@ -9,14 +9,60 @@ import '../styles/Projects.css';
 class Projects extends React.Component {
   constructor() {
     super();
-    this.state = { olderSort: false }
+    this.state = {
+      olderSort: false,
+      fillFolder: false,
+    }
   }
 
   handleSort = () => {
     this.setState((prevState) => ({ olderSort: !prevState.olderSort }));
   }
 
+  componentDidMount() {
+    this.getParameters();
+  }
+
+  getParameters = () => {
+    const windowSize = document.querySelector('.projectListWindow');
+    const titleSize = 22;
+    const itemsSize = (
+      document.querySelectorAll('.projectList').length * 25
+      + document.querySelectorAll('.projectListOdd').length * 25
+    );
+    const itemPar = itemsSize % 2 === 0 ? 0 : 1;
+    const fillSize = (windowSize.clientHeight - itemsSize - titleSize - 20) / 25;
+    // const footerSize = parseInt((fillSize - Math.floor(fillSize)) * 100);
+    const footerSize = (fillSize - Math.floor(fillSize)) * 25;
+
+    this.setState({
+      fillFolder: true,
+      fillSize,
+      itemPar,
+      footerSize,
+    });
+  }
+ 
+  fillFolder = () => {
+    const { fillSize, itemPar } = this.state;
+    const blankLines = [];
+
+    for (let i = (itemPar); i < fillSize - 1; i += 1) {
+      blankLines.push(
+        <div
+          key={ i }
+          className={
+            i % 2 === 0 ? "projectList" : "projectListOdd"
+          }/>
+      );      
+    }
+
+    return (blankLines);
+  }
+
   render() {
+    const { fillFolder, footerSize } = this.state;
+
     return (
       <div>
         <Header />
@@ -32,9 +78,11 @@ class Projects extends React.Component {
               <div className="projectListWindow">
                 <div className="projectListTitles">
                   <p id="projectName">Nome</p>
+                  <div id="lineBetweenTitle" />
                   <p onClick={ this.handleSort }>Data de criação &nbsp;</p>
                   { this.state.olderSort ? arrowUpIcon() : arrowDownIcon() }
                 </div>
+                <div id="lineUnderTitle" />
                 {
                   allProjects.sort((a, b) => {
                     const { olderSort } = this.state;
@@ -43,17 +91,28 @@ class Projects extends React.Component {
                     else return 1;
                   }).map(({ name, date, linkRepo }, index) => (
                     <a
+                      key={ index }
                       className={ index % 2 === 0 ? "projectList" : "projectListOdd" }
                       href={ linkRepo }
                       target="_blank"
                       rel="noreferrer"
                     >
                       { arrowRightIcon() }&nbsp;&nbsp;{ folderIcon() }&nbsp;
-                      <p class="projectNameList">{ name }</p>
-                      <p class="projectDateList">{ date }</p>
+                      <p className="projectNameList">{ name }</p>
+                      <p className="projectDateList">{ date }</p>
                     </a>
                   ))
                 }
+                {
+                  fillFolder && this.fillFolder()
+                }
+                <p
+                  id="footerList"
+                  style={{ height: `${20 + footerSize}px` }}
+                >
+                  { allProjects.length }&nbsp;
+                  itens
+                </p>
               </div>
             </div>
           </div>
