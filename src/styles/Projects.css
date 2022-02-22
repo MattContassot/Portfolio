@@ -1,0 +1,81 @@
+#mainProjects {
+  background-color: #202020;
+  border-radius: 10px;
+}
+
+.projetoPR {
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.janelaNavegadorPR {
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.botoesPR {
+  width: 100%;
+}
+
+.botoesPR > h1 {
+  text-align: center;
+  width: calc( 100% - 75px);
+}
+
+.botaoPR, .botoesPR > a {
+  height: 15px;
+  width: 15px;
+}
+
+.projectListWindow {
+  background-color: rgb(153, 153, 153);
+  min-height: calc(100vh - 130px - 60px - 75px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.projectListTitles {
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+}
+
+#projectName {
+  margin-left: 20px;
+  width: 700px;
+}
+
+.projectNameList {
+  width: calc(700px - 50px);
+}
+
+.projectDateList {
+  color: gray;
+}
+
+.projectList, .projectListOdd {
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+  height: 25px;
+  width: calc(100% - 15px);
+  padding-left: 15px; /* Talvez tenha que mudar após arrumar ícones da flecha e pasta */
+  color: black;
+}
+
+.bi-caret-right-fill {
+  color: gray;
+}
+
+.bi-folder-fill {
+  color: rgb(107, 193, 219);
+}
+
+.projectListOdd {
+  background-color: #f5f5f5;
+}

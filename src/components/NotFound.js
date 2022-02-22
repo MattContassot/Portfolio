@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import '../App.css';
+import '../styles/App.css';
 import Footer from './Footer';
 
 class NotFound extends React.Component {

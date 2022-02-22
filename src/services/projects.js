@@ -12,28 +12,40 @@ import solarSystem from './images/solarSystem.png';
 
 const allProjects = [
   {
+    index: 3,
     name: 'Solar System',
     img: solarSystem,
     imgName: 'solarSystem',
     link: 'https://focused-wright-f4e7f9.netlify.app/',
+    linkRepo: 'https://github.com/projetosContassot/solarSystem',
+    date: '03 de jan de 2022',
   },
   {
+    index: 2,
     name: 'Shopping Cart',
     img: shoppingCart,
     imgName: 'shoppingCart',
     link: 'https://projetoscontassot.github.io/shoppingCart/',
+    linkRepo: 'https://github.com/projetosContassot/shoppingCart',
+    date: '02 de dez de 2021',
   },
   {
+    index: 1,
     name: 'Trybewarts',
     img: trybeWarts,
     imgName: 'trybeWarts',
     link: 'https://projetoscontassot.github.io/trybewarts/',
+    linkRepo: 'https://github.com/projetosContassot/trybewarts',
+    date: '10 de nov de 2021',
   },
   {
+    index: 0,
     name: 'Pixel Art',
     img: pixelArt,
     imgName: 'pixelArt',
     link: 'https://projetoscontassot.github.io/pixelArt/',
+    linkRepo: 'https://github.com/projetosContassot/pixelArt',
+    date: '25 de out de 2021',
   },
 ];
 
