@@ -3,14 +3,16 @@ import Header from '../components/Header';
 import ProjectCard from '../components/ProjectCard';
 import Footer from '../components/Footer';
 import allProjects from '../services/projects';
+import { PageContainer, ComponentContainer } from '../styles/GlobalStyle';
 
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <PageContainer>
         <Header />
-        <main>
-          {
+        <ComponentContainer>
+          <p>Teste</p>
+          {/* {
             allProjects.map((projeto, index) => {
               const { name, img, imgName, link } = projeto;
               return (
@@ -23,10 +25,10 @@ class Home extends React.Component {
                 />
               );
             })
-          }
-        </main>
+          } */}
+        </ComponentContainer>
         <Footer />
-      </div>
+      </PageContainer>
     );
   }
 }

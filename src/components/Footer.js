@@ -1,38 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { discordIcon, gitHubIcon, linkedInIcon } from '../services/icons';
+import { Container, StyledFooter, A } from '../styles/Footer';
+import { StyledLink } from '../styles/Header';
+import { BLACK, BLUE_LINKEDIN } from '../helpers/colors';
 
-class Footer extends React.Component {
-  constructor() {
-    super();
+function Footer() {
+  return (
+    <StyledFooter>
+      <Container>
+        <A
+          href="https://www.linkedin.com/in/matheuscontassot/"
+          target="_blank"
+          rel="noreferrer"
+          color={ BLUE_LINKEDIN }
+        >
+          {linkedInIcon()}
+        </A>
 
-    this.handleMouse = this.handleMouse.bind(this);
-  }
+        <A
+          href="https://github.com/MattContassot"
+          target="_blank"
+          rel="noreferrer"
+          color={ BLACK }
+        >
+          {gitHubIcon()}
+        </A>
 
-  handleMouse({ type, currentTarget }) {
-    const {id, classList} = currentTarget;
-    let operation = 'remove';
-    if (type === 'mouseenter') operation = 'add';
-    classList[operation](`${id}Selecionado`);
-  }
-
-  render() {
-    return (
-      <footer id="footer">
-        <div>
-          <a id="linkedIn" href="https://www.linkedin.com/in/matheuscontassot/" target="_blank" rel="noreferrer" onMouseEnter={ this.handleMouse } onMouseLeave={ this.handleMouse }>
-            {linkedInIcon()}
-          </a>
-          <a id="gitHub" href="https://github.com/MattContassot" target="_blank" rel="noreferrer" onMouseEnter={ this.handleMouse } onMouseLeave={ this.handleMouse }>
-            {gitHubIcon()}
-          </a>
-          <Link to="/404">
-            {discordIcon()}
-          </Link>        
-        </div>
-      </footer>
-    );
-  }
+        <StyledLink to="/404">
+          {discordIcon()}
+        </StyledLink>        
+      </Container>
+    </StyledFooter>
+  );
 }
 
 export default Footer;

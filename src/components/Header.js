@@ -1,19 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { StyledHeader, StyledLink, Nav } from '../styles/Header';
 
-class Header extends React.Component {
-  render() {
-    return (
-      <header>
-        <Link id="nome" to="/">Matheus Contassot</Link>
-        <nav>
-          <Link to="/about">Sobre</Link>
-          <Link to="/projects">Projetos</Link>
-          <Link to="/contact">Contato</Link>
-        </nav>
-      </header>
-    );
-  }
+function Header() {
+  return (
+    <StyledHeader>
+      <StyledLink title="true" to="/">Matheus Contassot</StyledLink>
+      <Nav>
+        <StyledLink to="/about">Sobre</StyledLink>
+        <StyledLink to="/projects">Projetos</StyledLink>
+        <StyledLink to="/contact">Contato</StyledLink>
+      </Nav>
+    </StyledHeader>
+  );
 }
 
 export default Header;

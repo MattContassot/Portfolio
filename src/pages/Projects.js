@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { folderIcon, arrowRightIcon, arrowUpIcon, arrowDownIcon } from '../services/icons';
 import allProjects from '../services/projects';
-import '../styles/Projects.css';
+// import '../styles/Projects.css';
 
 class Projects extends React.Component {
   constructor() {
