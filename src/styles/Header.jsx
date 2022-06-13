@@ -4,7 +4,7 @@ import { GLOBAL_MARGIN, GLOBAL_MARGIN_SQUARE, HEADER_PADDING, HEADER_HEIGHT, HEA
 import { DARK_GRAY } from '../helpers/colors';
 import device from '../helpers/devices';
 
-const { iPhone, tablet, squareDisplay } = device;
+const { tablet, squareDisplay } = device;
 
 export const StyledHeader = styled.header `
   display: flex;
