@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { folderIcon, arrowRightIcon, arrowUpIcon, arrowDownIcon } from '../services/icons';
 import allProjects from '../services/projects';
-// import '../styles/Projects.css';
+import { PageContainer, ComponentContainer } from '../styles/GlobalStyle';
 
 class Projects extends React.Component {
   constructor() {
@@ -63,9 +63,9 @@ class Projects extends React.Component {
     const { fillFolder, footerSize } = this.state;
 
     return (
-      <div>
+      <PageContainer>
         <Header />
-        <main id="mainProjects">
+        <ComponentContainer id="mainProjects">
           <div className="projetoPR">
             <div className="janelaNavegadorPR">
               <div className="botoesPR">
@@ -115,9 +115,9 @@ class Projects extends React.Component {
               </div>
             </div>
           </div>
-        </main>
+        </ComponentContainer>
         <Footer />
-      </div>
+      </PageContainer>
     );
   }
 }
