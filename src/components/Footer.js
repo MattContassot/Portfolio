@@ -1,5 +1,5 @@
 import React from 'react';
-import { discordIcon, gitHubIcon, linkedInIcon } from '../services/icons';
+import { discordIcon, gitHubIcon, linkedInIcon } from '../helpers/icons';
 import { Container, StyledFooter, A } from '../styles/Footer';
 import { StyledLink } from '../styles/Header';
 import { BLACK, BLUE_LINKEDIN } from '../helpers/colors';

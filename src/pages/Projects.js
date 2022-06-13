@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import { folderIcon, arrowRightIcon, arrowUpIcon, arrowDownIcon } from '../services/icons';
-import allProjects from '../services/projects';
+import { folderIcon, arrowRightIcon, arrowUpIcon, arrowDownIcon } from '../helpers/icons';
+import allProjects from '../helpers/projects';
 import { PageContainer, ComponentContainer } from '../styles/GlobalStyle';
 
 class Projects extends React.Component {
