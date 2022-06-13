@@ -94,7 +94,7 @@ class Projects extends React.Component {
                       className={ index % 2 === 0 ? "projectList" : "projectListOdd" }
                       href={ linkRepo }
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     >
                       { arrowRightIcon() }&nbsp;&nbsp;{ folderIcon() }&nbsp;
                       <p className="projectNameList">{ name }</p>

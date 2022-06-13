@@ -11,7 +11,7 @@ function Footer() {
         <A
           href="https://www.linkedin.com/in/matheuscontassot/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           color={ BLUE_LINKEDIN }
         >
           {linkedInIcon()}
@@ -20,7 +20,7 @@ function Footer() {
         <A
           href="https://github.com/MattContassot"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           color={ BLACK }
         >
           {gitHubIcon()}

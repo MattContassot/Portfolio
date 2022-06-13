@@ -1,21 +1,36 @@
 import styled from 'styled-components';
-import { GLOBAL_MARGIN, HEADER_HEIGHT } from '../helpers/globalSizes';
-import { BLACK } from '../helpers/colors';
+import { GLOBAL_MARGIN, HEADER_HEIGHT, GLOBAL_MARGIN_SQUARE } from '../helpers/globalSizes';
+import device from '../helpers/devices';
+
+const { iPhone, squareDisplay } = device;
 
 export const PageContainer = styled.div`
   margin: 0 ${ GLOBAL_MARGIN };
-  width: calc(100vw - (${ GLOBAL_MARGIN } * 2));
-  max-width: 100vw;
+  width: calc(100% - (${ GLOBAL_MARGIN } * 2));
 
-  @media (min-width: 768px) {
+  @media ${ iPhone } {
     font-size: 1.2rem;
+  }
+
+  @media ${ squareDisplay } {
+    margin: 0 ${ GLOBAL_MARGIN_SQUARE };
+    width: calc(100% - (${ GLOBAL_MARGIN_SQUARE } * 2));
   }
 `;
 
 export const ComponentContainer = styled.main`
-  align-items: center;
+  align-items: flex-start;
+  align-content: flex-start;
   display: flex;
-  justify-content: center;
-  min-height: calc(100vh - (${HEADER_HEIGHT}));
-  top: ${HEADER_HEIGHT};
+  flex-direction: 'column';
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  justify-content: flex-start;
+  min-height: calc(100vh - (${ HEADER_HEIGHT } * 2) - 1rem);
+  padding-top: calc((${ HEADER_HEIGHT }) + 1rem);
+  width: 100%;
+
+  @media ${ iPhone } {
+    flex-direction: ${({ direction }) => direction ? direction : 'column'};
+  }
 `;

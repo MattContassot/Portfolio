@@ -1,43 +1,29 @@
 import React from 'react';
+import { useState } from 'react';
+import { BrowerScreen, BrowserButton, BrowserButtons, BrowserWindow, Container, ProjectTitle } from '../styles/ProjectCard';
 
-class ProjectCard extends React.Component {
-  constructor() {
-    super();
+function ProjectCard({ name, img, imgName, link}) {
+  const [over, setOver] = useState(false);
 
-    this.handleMouse = this.handleMouse.bind(this);
-  }
-
-  handleMouse({ type, currentTarget }) {
-    const botoes = currentTarget.querySelectorAll('.botao');
-    if (type === 'mouseenter') return (
-      currentTarget.id = 'projetoSelecionado',
-      botoes[0].classList.add('botaoVermelho'),
-      botoes[1].classList.add('botaoAmarelo'),
-      botoes[2].classList.add('botaoVerde')
-    );
-    currentTarget.removeAttribute('id');
-    botoes.forEach((botao) => botao.className = 'botao');
-  }
-
-  render() {
-    const { name, img, imgName, link} = this.props;
-
-    return (
-      <div className="projeto" onMouseEnter={ this.handleMouse } onMouseLeave={ this.handleMouse }>
-        <div className="janelaNavegador">
-          <div className="botoes">
-            <div className="botao"></div>
-            <div className="botao"></div>
-            <div className="botao"></div>
-          </div>
-          <a href={ link } target="_blank" rel="noreferrer">
-            <img src={ img } alt={ imgName } />
-          </a>
-        </div>
-        <p>{name}</p>
-      </div>
-    );
-  }
+  return (
+    <Container
+      onMouseEnter={ () => setOver(true) }
+      onMouseLeave={ () => setOver(false) }
+      over={ over }
+    >
+      <BrowserWindow className="janelaNavegador">
+        <BrowserButtons className="botoes">
+          <BrowserButton over={ over } color="red" />
+          <BrowserButton over={ over } color="yellow" />
+          <BrowserButton over={ over } color="green" />
+        </BrowserButtons>
+        <a href={ link } target="_blank" rel="noopener noreferrer">
+          <BrowerScreen src={ img } alt={ imgName } />
+        </a>
+      </BrowserWindow>
+      <ProjectTitle>{ name }</ProjectTitle>
+    </Container>
+  );
 }
 
 export default ProjectCard;

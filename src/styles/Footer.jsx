@@ -1,16 +1,24 @@
 import styled from 'styled-components';
-import { DARK_GRAY, BLACK, BLUE_LINKEDIN } from '../helpers/colors';
-import { GLOBAL_MARGIN, HEADER_PADDING, HEADER_HEIGHT } from '../helpers/globalSizes';
+import { DARK_GRAY } from '../helpers/colors';
+import { GLOBAL_MARGIN, HEADER_PADDING, HEADER_HEIGHT, GLOBAL_MARGIN_SQUARE } from '../helpers/globalSizes';
+import device from '../helpers/devices';
+
+const { squareDisplay } = device;
 
 export const StyledFooter = styled.footer `
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100vw - (${ HEADER_PADDING } * 2));
+  width: 100%;
   margin-left: -${ GLOBAL_MARGIN };
   height: ${HEADER_HEIGHT};
   background-color: ${DARK_GRAY};
   padding: 0 ${ HEADER_PADDING };
+
+  @media ${ squareDisplay } {
+    margin-left: -${ GLOBAL_MARGIN_SQUARE };
+    width: calc(100% + ${ GLOBAL_MARGIN_SQUARE });
+  }
 `;
 
 export const Container = styled.div`
