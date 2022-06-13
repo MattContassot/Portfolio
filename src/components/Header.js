@@ -7,7 +7,7 @@ function Header() {
       <StyledLink title="true" to="/">Matheus Contassot</StyledLink>
       <Nav>
         <StyledLink to="/about">Sobre</StyledLink>
-        <StyledLink to="/projects">Projetos</StyledLink>
+        <StyledLink to="/codes">Códigos</StyledLink>
         <StyledLink to="/contact">Contato</StyledLink>
       </Nav>
     </StyledHeader>
