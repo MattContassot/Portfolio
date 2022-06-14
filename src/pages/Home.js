@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import ProjectCard from '../components/ProjectCard';
 import Footer from '../components/Footer';
-import allProjects from '../services/projects';
+import allProjects from '../helpers/projects';
 import { PageContainer, ComponentContainer } from '../styles/GlobalStyle';
 
 function Home() {
