@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { DARK_GRAY, LIGHTER_GRAY, LIGHT_GRAY, GRAY, TABLE_ODD, BLACK, TABLE_EVEN } from '../helpers/colors';
+import { DARK_GRAY, LIGHTER_GRAY, LIGHT_GRAY, GRAY, TABLE_ODD, BLACK, TABLE_EVEN, BLUE_FOLDER } from '../helpers/colors';
 import device from '../helpers/devices';
 import { BrowserButtons, BrowserButton } from './ProjectCard';
 
@@ -45,7 +45,7 @@ export const FolderTitle = styled.p`
 `;
 
 export const Table = styled.table`
-border-collapse: collapse;
+  border-collapse: collapse;
   width: 100%;
 `;
 
@@ -100,6 +100,16 @@ export const Data = styled.td`
   color: ${ BLACK };
   font-size: 0.8rem;
   padding-left: 0.3rem;
+
+  svg {
+    vertical-align: middle;
+    height: 1em;
+    width: 1em;
+  }
+
+  svg > path {
+    color: ${ BLUE_FOLDER };
+  }
 `;
 
 export const Footer = styled.p`
@@ -108,4 +118,7 @@ export const Footer = styled.p`
   color: ${ BLACK };
   font-size: 0.8rem;
   text-align: center;
+  align-self: center;
+  height: 1.3rem;
+  line-height: 1.3rem;
 `;

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { arrowDownIcon, arrowUpIcon } from '../helpers/icons';
-// import { arrowRightIcon, folderIcon } from '../helpers/icons';
+import { arrowDownIcon, arrowUpIcon, arrowRightIcon, folderIcon } from '../helpers/icons';
 import { ComponentContainer } from '../styles/GlobalStyle';
 import allProjects from '../helpers/projects';
 import { Column, Container, Content, Data, FolderButton, FolderTitle, FolterButtons, FolterHeader, HeadData, Header, Footer, Table } from '../styles/Codes';
@@ -39,10 +38,43 @@ function ProjectTable() {
 
           <Content>
           {
-            allProjects.map(({ name, date, linkRepo }, index) => (
+            allProjects.sort((a, b) => {
+              if (orderUp && sortByName) {
+                if (a.name > b.name) return 1;
+                
+                if (a.name < b.name) return -1;
+
+                return 0;
+              }
+              
+              if (orderUp && sortByDate) {
+                if (a.index > b.index) return 1;
+                
+                if (a.index < b.index) return -1;
+
+                return 0;
+              }
+
+              if (sortByName) {
+                if (a.name < b.name) return 1;
+                
+                if (a.name > b.name) return -1;
+
+                return 0;
+              }
+              
+              if (sortByDate) {
+                if (a.index < b.index) return 1;
+                
+                if (a.index > b.index) return -1;
+
+                return 0;
+              }
+
+              return 0;
+            }).map(({ name, date, linkRepo }, index) => (
               <Column key={ index } onClick={ () => console.log(name) }>
-                {/* { arrowRightIcon() }&nbsp;&nbsp;{ folderIcon() }&nbsp; */}
-                <Data>{ name }</Data>
+                <Data>{ folderIcon() } { name }</Data>
                 <Data>{ date }</Data>
               </Column>
             ))
