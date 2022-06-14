@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { arrowDownIcon, arrowRightIcon, arrowUpIcon, folderIcon } from '../helpers/icons';
+import { arrowDownIcon, arrowUpIcon } from '../helpers/icons';
+// import { arrowRightIcon, folderIcon } from '../helpers/icons';
 import { ComponentContainer } from '../styles/GlobalStyle';
 import allProjects from '../helpers/projects';
 import { Column, Container, Content, Data, FolderButton, FolderTitle, FolterButtons, FolterHeader, HeadData, Header, Footer, Table } from '../styles/Codes';

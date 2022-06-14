@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { DARK_GRAY, LIGHTER_GRAY, LIGHT_GRAY, GRAY, TABLE_ODD, BLACK, TABLE_EVEN, TESTE } from '../helpers/colors';
+import { DARK_GRAY, LIGHTER_GRAY, LIGHT_GRAY, GRAY, TABLE_ODD, BLACK, TABLE_EVEN } from '../helpers/colors';
 import device from '../helpers/devices';
 import { BrowserButtons, BrowserButton } from './ProjectCard';
 
