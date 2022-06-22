@@ -2,6 +2,7 @@ import pixelArt from './images/pixelArt.png';
 import trybeWarts from './images/trybeWarts.png';
 import shoppingCart from './images/shoppingCart.png';
 import solarSystem from './images/solarSystem.png';
+import portfolio from './images/portfolio.png';
 
 /*
   Passo a passo para incluir um novo projeto:
@@ -11,6 +12,15 @@ import solarSystem from './images/solarSystem.png';
 */
 
 const allProjects = [
+  {
+    index: 4,
+    name: 'Portfólio',
+    img: portfolio,
+    imgName: 'portfolio',
+    link: 'https://matheuscontassot.netlify.app/',
+    linkRepo: 'https://github.com/MattContassot/Portfolio',
+    date: '07 de mar de 2022',
+  },
   {
     index: 3,
     name: 'Solar System',

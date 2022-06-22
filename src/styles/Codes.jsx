@@ -3,7 +3,14 @@ import { DARK_GRAY, LIGHTER_GRAY, LIGHT_GRAY, GRAY, TABLE_ODD, BLACK, TABLE_EVEN
 import device from '../helpers/devices';
 import { BrowserButtons, BrowserButton } from './ProjectCard';
 
-const { squareDisplay } = device;
+const { iPhone, tablet, notebook, squareDisplay } = device;
+
+const buttonWidth = {
+  motoG: '14%',
+  tablet: '9%',
+  notebook: '6%',
+  squareDisplay: '5%',
+};
 
 export const Container = styled.div`
   display: flex;
@@ -13,35 +20,70 @@ export const Container = styled.div`
   width: 100%;
   background-color: ${ LIGHTER_GRAY };
   border-radius: 5px;
-
-  @media ${ squareDisplay } {
-    width: 100%;
-  }
 `;
 
-export const FolterHeader = styled.div`
+export const FolderHeader = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
   height: 2rem;
 `;
 
-export const FolterButtons = styled(BrowserButtons)`
+export const FolderButtons = styled(BrowserButtons)`
   display: flex;
   justify-content: center;
-  width: 14%;
+  width: ${buttonWidth.motoG};
+
+  @media ${ tablet } {
+    width: ${buttonWidth.tablet};
+  }
+  
+  @media ${ notebook } {
+    width: ${buttonWidth.notebook};
+  }
+  
+  @media ${ squareDisplay } {
+    width: ${buttonWidth.squareDisplay};
+  }
 `;
 
 export const FolderButton = styled(BrowserButton)`
   height: 9px;
   width: 9px;
   background-color: ${({ over, color }) => over ? color : LIGHT_GRAY};
+  
+  :hover {
+    transform: scale(${({ color }) => color === 'red' ? '1.3' : '1'});
+    transition: all 0.2s;
+  }
+
+  @media ${ tablet } {
+    height: 10px;
+    width: 10px;
+  }
+  
+  @media ${ notebook } {
+    height: 11px;
+    width: 11px;
+  }
 `;
 
 export const FolderTitle = styled.p`
   color: ${ DARK_GRAY };
-  width: 86%;
+  width: calc(100% - ${buttonWidth.motoG});
   text-align: center;
+
+  @media ${ tablet } {
+    width: calc(100% - ${buttonWidth.tablet});
+  }
+  
+  @media ${ notebook } {
+    width: calc(100% - ${buttonWidth.notebook});
+  }
+  
+  @media ${ squareDisplay } {
+    width: calc(100% - ${buttonWidth.squareDisplay});
+  }
 `;
 
 export const Table = styled.table`
@@ -54,7 +96,6 @@ export const Header = styled.thead`
   background-color: ${ TABLE_ODD };
   border-top: solid ${ GRAY } 1px;
   border-bottom: solid ${ GRAY } 1px;
-  font-size: 0.8rem;
 `;
 
 export const Column = styled.tr`
@@ -67,6 +108,7 @@ export const HeadData = styled.th`
   text-align: left;
   padding-left: 0.3rem;
   width: 60%;
+  font-size: 0.8rem;
 
   svg {
     vertical-align: middle;
@@ -76,6 +118,14 @@ export const HeadData = styled.th`
 
   svg > path {
     color: ${ BLACK };
+  }
+
+  @media ${ iPhone } {
+    font-size: 1rem;
+  }
+  
+  @media ${ squareDisplay } {
+    padding-left: 0.7rem;
   }
 `;
 
@@ -109,6 +159,15 @@ export const Data = styled.td`
 
   svg > path {
     color: ${ BLUE_FOLDER };
+  }
+
+  @media ${ iPhone } {
+    font-size: 1rem;
+    height: 1.5rem;
+  }
+
+  @media ${ squareDisplay } {
+    padding-left: 0.7rem;
   }
 `;
 
