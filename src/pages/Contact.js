@@ -8,7 +8,7 @@ function Contact() {
     <PageContainer>
       <Header />
       <ComponentContainer>
-        <h1>Em breve: formulário para contato que envia o email automaticamente</h1>
+        <h1>Implementar formulário para contato que envia o e-mail automaticamente</h1>
       </ComponentContainer>
       <Footer />
     </PageContainer>

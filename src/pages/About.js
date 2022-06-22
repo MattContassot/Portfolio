@@ -8,7 +8,7 @@ function About() {
     <PageContainer>
       <Header />
       <ComponentContainer>
-        <h1>Colocar foto, escrever sobre mim e sobre com o que quero trabalhar</h1>
+        <h1>Colocar foto, escrever sobre mim e o quanto eu quero trabalhar como front-end</h1>
       </ComponentContainer>
       <Footer />
     </PageContainer>
