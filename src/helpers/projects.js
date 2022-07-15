@@ -3,6 +3,7 @@ import trybeWarts from './images/trybeWarts.png';
 import shoppingCart from './images/shoppingCart.png';
 import solarSystem from './images/solarSystem.png';
 import portfolio from './images/portfolio.png';
+import gurizadaHardcore from './images/gurizadaHardcore.png';
 
 /*
   Passo a passo para incluir um novo projeto:
@@ -12,6 +13,15 @@ import portfolio from './images/portfolio.png';
 */
 
 const allProjects = [
+  {
+    index: 5,
+    name: 'Gurizada Hardcore',
+    img: gurizadaHardcore,
+    imgName: 'gurizadaHardcore',
+    link: 'http://gurizadahardcore.com.br/',
+    linkRepo: 'https://matheuscontassot.netlify.app/',
+    date: 'Em desenvolvimento',
+  },
   {
     index: 4,
     name: 'Portfólio',
